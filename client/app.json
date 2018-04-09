@@ -9,5 +9,17 @@
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "Wafer Quick Start",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "list":[
+      {
+        "text":"首页",
+        "pagePath":""
+      },
+      {
+        "text": "shuo",
+        "pagePath": ""
+      }
+    ]
   }
 }
