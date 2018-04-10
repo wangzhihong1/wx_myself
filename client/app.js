@@ -1,7 +1,8 @@
 //app.js
 App({
   globalData:{ // 自定义全局变量
-    douBanBaseUrl:'http://t.yushu.im'
+    douBanBaseUrl:'http://t.yushu.im',
+    musicId:0
   },
 
   /**

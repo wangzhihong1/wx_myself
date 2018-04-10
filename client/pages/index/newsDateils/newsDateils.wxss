@@ -86,9 +86,8 @@
 }
 .datail-content {
   color: #666;
-  margin-left: 30rpx;
-  margin-top: 20rpx;
-  margin-right: 30rpx;
+  margin: 20rpx 30rpx;
   line-height: 44rpx;
   letter-spacing: 2px;
+  font-size:30rpx;
 }
