@@ -1,5 +1,4 @@
 // pages/index/newsDateils.js
-var app = getApp();
 var newsData = require("../../../data/data-template.js");
 Page({
 
@@ -7,8 +6,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    id: 0,
-    details: {},
     isCollection: false,
     isMusic: false
   },
@@ -19,23 +16,15 @@ Page({
   onLoad: function (options) {
     var _this = this;
     this.setData({
-      id: options.newsId,
       details: newsData[options.newsId]
-    });
+    }); 
     wx.getBackgroundAudioPlayerState({ // 获取播放状态
       success: function (res) {
         //console.log(res.status);
         if (res.status == 1) {// 1 正在播放
-          if (app.globalData.musicId == _this.data.id) {
-            _this.setData({
-              isMusic: true
-            });
-          } else {
-            _this.setData({
-              isMusic: false
-            });
-          }
-
+          _this.setData({
+            isMusic: true
+          });
         } else if (res.status == 0) { // 0 未播放
           _this.setData({
             isMusic: false
@@ -44,45 +33,25 @@ Page({
       }
     })
     wx.onBackgroundAudioStop(function () { // 监听音乐停止
-      if (app.globalData.musicId == _this.data.id) {
-        _this.setData({
-          isMusic: true
-        });
-      } else {
-        _this.setData({
-          isMusic: false
-        });
-      }
+      _this.setData({
+        isMusic: false
+      });
     })
     wx.onBackgroundAudioPlay(function () { // 控件里播放时触发
-      console.log("继续播放");
-      if (app.globalData.musicId == _this.data.id) {
-        _this.setData({
-          isMusic: true
-        });
-      } else {
-        _this.setData({
-          isMusic: false
-        });
-      }
+    console.log("继续播放");
+      _this.setData({
+        isMusic: true
+      });
     })
     wx.onBackgroundAudioPause(function () { // 控件里暂停播放时触发
       console.log("暂停播放");
-      if (app.globalData.musicId == _this.data.id) {
-        _this.setData({
-          isMusic: true
-        });
-      } else {
-        _this.setData({
-          isMusic: false
-        });
-      }
+      _this.setData({
+        isMusic: false
+      });
     })
   },
   // 点击图标 音乐
   onMusicTap: function () {
-    app.globalData.musicId = this.data.id;
-    console.log(app.globalData.musicId);
     var _this = this;
     if (_this.data.isMusic) {
       _this.setData({
@@ -102,7 +71,7 @@ Page({
         }
       })
     }
-
+    
 
 
   },
