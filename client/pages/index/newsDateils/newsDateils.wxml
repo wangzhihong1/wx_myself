@@ -1,0 +1,21 @@
+<!--pages/index/newsDateils.wxml-->
+<view class="news-dateils-container">
+  <view class='head-music'>
+    <image class='head-bg' src='{{details.imgSrc}}'></image>
+    <image class='music-btn' src='/images/music/music-start.png'></image>
+  </view>
+  <view class="author-info">
+    <image class="author-img" src='{{details.avatar}}'></image>
+    <text class="author-name">{{details.author}}</text>
+    <text class="faBiao-time">发表于 {{details.dateTime}}</text>
+  </view>
+  <text class="dateils-title">{{details.title}}</text>
+  <view class="tool">
+    <view class="circle-img">
+      <image catchtap="onCollectionTap" src="{{isCollection?'/images/icon/collection-anti.png':'/images/icon/collection.png'}}"></image>
+      <image src='/images/icon/share.png' class='share-img'></image>
+    </view>
+    <view class="horizon"></view>
+  </view>
+  <view class="datail-content">{{details.detail}}</view>
+</view>

@@ -1,0 +1,12 @@
+<template name="gradeTem">
+  <view class="grade-container">
+    <view class="stars">
+      <block wx:for="{{stars}}" wx:key="{{key}}" wx:for-item="i">
+        <image wx:if="{{i==1}}" src='/images/icon/star.png'></image>
+        <image wx:else src='/images/icon/none-star.png'></image>
+      </block>
+
+    </view>
+    <text class="grade-num">{{average}}</text>
+  </view>
+</template>

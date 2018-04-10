@@ -1,0 +1,10 @@
+<!--pages/movies/more/more.wxml-->
+<import src="../template/movies-list-tem/movies-list-tem.wxml" />
+<view  class="more-container">
+  <block wx:for="{{subjects}}" wx:key="{{key}}">
+    <view class="more-list-container" catchtap='onMoviesDetailsTap' data-details-id='{{item.id}}'>
+      <template is="moviesListTem" data="{{item}}" />
+    </view>
+  </block>
+
+</view>

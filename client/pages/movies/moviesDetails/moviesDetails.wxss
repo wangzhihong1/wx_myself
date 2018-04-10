@@ -1,0 +1,135 @@
+/* pages/movies/moviesDetails/moviesDetails.wxss */
+@import "../template/grade-tem/grade-tem.wxss";
+.movie-details-container {
+  display: flex;
+  flex-direction: column;
+}
+.movie-bg {
+  width: 100%;
+  height: 320rpx;
+  -webkit-filter: blur(20px);
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 320rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.head-title {
+  font-size: 19px;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 50rpx;
+  margin-left: 40rpx;
+  letter-spacing: 2px;
+}
+
+.sub-title {
+  font-size: 28rpx;
+  color: #fff;
+  margin-left: 40rpx;
+  margin-top: 30rpx;
+}
+
+.head-info {
+  display: flex;
+  flex-direction: row;
+  margin-left: 40rpx;
+  margin-top: 40rpx;
+}
+
+.info-num {
+  color: #f21146;
+  font-size: 22rpx;
+  margin-right: 10rpx;
+}
+
+.info-text {
+  color: #666;
+  font-size: 22rpx;
+  margin-right: 30rpx;
+}
+
+.movie-img {
+  height: 238rpx;
+  width: 175rpx;
+  position: absolute;
+  top: 160rpx;
+  right: 30rpx;
+}
+
+.details-box {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px #d9d9d9 solid;
+  padding: 40rpx;
+  color: #777;
+  font-size: 28rpx;
+}
+
+.details-title {
+  color: #1f3463;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 40rpx;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10rpx;
+}
+
+.mark {
+  margin-right: 30rpx;
+  white-space: nowrap;
+  color: #999;
+}
+
+.synopsis-font {
+  color: #999;
+}
+
+.summary-content {
+  margin-top: 20rpx;
+  line-height: 40rpx;
+  letter-spacing: 1px;
+}
+.cast{
+    margin-left:40rpx;
+    display:flex;
+    flex-direction: column;
+    margin-top:50rpx;
+}
+
+.cast-font{
+    color: #999;
+    margin-bottom: 40rpx;
+}
+
+.cast-container{
+    display:inline-flex;
+    flex-direction: column;
+    margin-bottom: 50rpx;
+    margin-right: 40rpx;
+    width: 170rpx;
+    text-align:center;
+    white-space: normal;
+}
+
+.cast-imgs{
+    white-space: nowrap;
+}
+
+.cast-img{
+    width: 170rpx;
+    height: 210rpx;
+}
+.cast-name{
+    margin: 10rpx auto 0;
+    font-size:32rpx;
+}

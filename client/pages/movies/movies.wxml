@@ -1,0 +1,33 @@
+<!--pages/movies/movies.wxml-->
+<import src="./template/movies-tem/movies-tem.wxml" />
+<import src="./template/movies-list-tem/movies-list-tem.wxml" />
+<view class="page-body">
+  <view class="search">
+    <icon class="search-icon" type="search" size="15" color='#405f80'></icon>
+    <input class="search-ipt" type='text' bindfocus='onBindFocus' bindconfirm='onBindConfirm' placeholder='搜索电影' placeholder-class='placeholder' value="{{searchValue}}"></input>
+    <icon class="close-icon" type="clear" wx:if="{{isSearchPage}}" catchtap='closeSearch' size="18" color='#405f80'></icon>
+  </view>
+  <view wx:if="{{isContainerPage}}">
+    <view class="movies-modules-box">
+      <template is="moviesTem" data="{{...in_theaters}}"/>
+    </view>
+    <view class="movies-modules-box">
+      <template is="moviesTem" data="{{...coming_soon}}"/>
+    </view>
+    <view class="movies-modules-box">
+      <template is="moviesTem" data="{{...top250}}"/>
+    </view>
+  </view>
+</view>
+<view class="search-page" wx:if="{{isSearchPage}}">
+  <view wx:if="{{searchData.subjects.length>0}}">
+    <block wx:for="{{searchData.subjects}}" wx:key="{{key}}">
+      <view class="more-list-container">
+        <template is="moviesListTem" data="{{item}}"/>
+      </view>
+    </block>
+  </view>
+  <view wx:else>
+    <text>暂无搜索结果。。。</text>
+  </view>
+</view>

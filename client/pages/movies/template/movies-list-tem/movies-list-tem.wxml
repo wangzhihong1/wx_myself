@@ -1,0 +1,8 @@
+<import src="../grade-tem/grade-tem.wxml" />
+<template name="moviesListTem">
+  <view class="movies-list-container" catchtap="onMoviesDetailsTap" data-details-id="{{item.id}}">
+    <image class="movies-list-img" src='{{item.images.large}}'></image>
+    <text class="movie-list-title">{{item.title}}</text>
+    <template is="gradeTem" data="{{...item.rating}}"/>
+  </view>
+</template>

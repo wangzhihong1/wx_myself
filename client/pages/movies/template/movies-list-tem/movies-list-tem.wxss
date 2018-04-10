@@ -1,0 +1,18 @@
+@import "../grade-tem/grade-tem.wxss";
+.movies-list-container{
+  display: flex;
+  flex-direction: column;
+}
+.movies-list-box{
+  display: flex;
+  flex-direction: row;
+}
+.movies-list-img{
+  width: 200rpx;
+  height: 270rpx;
+  padding-bottom: 20rpx;
+}
+.movie-list-title{
+    margin-bottom: 16rpx;
+    font-size: 24rpx;
+}

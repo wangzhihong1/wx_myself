@@ -1,0 +1,12 @@
+/* pages/movies/more/more.wxss */
+@import "../template/movies-list-tem/movies-list-tem.wxss";
+.more-container{
+  padding:15px;
+  height:1300rpx;
+}
+.more-container .more-list-container{
+  float:left;
+  margin-left: 15rpx;
+  margin-right:15rpx;
+  margin-bottom:15px;
+}

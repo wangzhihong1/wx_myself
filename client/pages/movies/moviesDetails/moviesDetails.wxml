@@ -1,0 +1,52 @@
+<!--pages/movies/moviesDetails/moviesDetails.wxml-->
+<import src="../template/grade-tem/grade-tem.wxml" />
+<view class="movie-details-container">
+  <image class="movie-bg" src="{{detailsData.images}}" mode="aspectFill"></image>
+  <view class="header" catchtap='viewMoviesImg' data-src="{{detailsData.images}}">
+    <text class="head-title">{{detailsData.title}}</text>
+    <text class="sub-title">{{detailsData.countries}} . {{detailsData.year}}</text>
+    <view class="head-info">
+      <text class="info-num">{{detailsData.wish_count}}</text>
+      <text class="info-text">喜欢</text>
+      <text class="info-num">{{detailsData.reviews_count}}</text>
+      <text class="info-text">条评论</text>
+    </view>
+    
+    <image class="movie-img" src="{{detailsData.images}}"></image>
+  </view>
+  <view class="details-box">
+    <text class="details-title">{{detailsData.original_title}}</text>
+    <view class="flex-row">
+      <text class="mark">评分</text>
+      <template is="gradeTem" data="{{...detailsData.rating}}"/>
+    </view>
+    <view class="flex-row">
+      <text class="mark">导演</text>
+      <text>{{detailsData.directors}}</text>
+    </view>
+    <view class="flex-row">
+      <text class="mark">影人</text>
+      <text>{{detailsData.castsName}}</text>
+    </view>
+    <view class="flex-row">
+      <text class="mark">类型</text>
+      <text>{{detailsData.genres}}</text>
+    </view>
+  </view>
+  <view class="details-box">
+      <text class="synopsis-font">剧情介绍</text>
+      <text class='summary-content'>{{detailsData.summary}}</text>
+  </view>
+  <view class="cast">
+    <text class="cast-font">影人</text>
+    <scroll-view class="cast-imgs" scroll-x>
+      <block wx:for="{{detailsData.casts}}" wx:key="{{key}}">
+        <view class="cast-container">
+          <image class="cast-img" src="{{item.avatars.large}}"></image>
+          <text class="cast-name">{{item.name}}</text>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+
+</view>

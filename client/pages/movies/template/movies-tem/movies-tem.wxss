@@ -1,0 +1,33 @@
+@import "../movies-list-tem/movies-list-tem.wxss";
+.movies-tem-container{
+  width:100%;
+  display:flex;
+  flex-direction: column;
+  padding-bottom:15px;
+}
+.movier-tem-head{
+  padding: 15px;
+}
+.movier-tem-tit{
+  font-size:24rpx;
+  padding-top: 14rpx;
+}
+.movier-tem-more{
+  float:right;
+}
+.movier-tem-more-text{
+  font-size:24rpx;
+  vertical-align: middle;
+}
+.movier-tem-more-icon{
+  width: 9rpx;
+  height: 16rpx;
+  vertical-align: middle;
+  margin-left:5rpx;
+}
+.movies-list-box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding:0 15px;
+}

@@ -1,0 +1,10 @@
+<template name="postsTemplate">
+  <view class='posts-container'>
+    <view class="posts">
+      <image class="posts-author" src='{{avatar}}'></image>
+      <text class='posts-time'>{{date}}</text>
+    </view>
+    <text class='post-title'>{{title}}</text>
+    <image class='posts-link-img' src='{{imgSrc}}'></image>
+  </view>
+</template>

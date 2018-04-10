@@ -4,9 +4,13 @@
 	"miniprogramRoot": "./client",
 	"qcloudRoot": "./server",
 	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
 		"newFeature": true
 	},
 	"appid": "wx45348cd6db21a91a",
-	"projectname": "wangzhihong",
+	"projectname": "wx_project",
 	"condition": {}
 }

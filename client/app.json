@@ -1,24 +1,33 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/addCgi/addCgi"
+    "pages/index/newsDateils/newsDateils",
+    "pages/movies/movies",
+    "pages/movies/moviesDetails/moviesDetails",
+    "pages/movies/more/more"
   ],
   "window":{
     "backgroundColor":"#F6F6F6",
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "Wafer Quick Start",
+    "navigationBarTitleText": "首页",
     "navigationBarTextStyle":"black"
   },
   "tabBar":{
-    "list":[
+    "borderStyle": "white",
+    "position": "bottom",
+    "list": [
       {
-        "text":"首页",
-        "pagePath":""
+        "pagePath": "pages/index/index",
+        "text": "阅读",
+        "iconPath": "images/tab/yuedu.png",
+        "selectedIconPath": "images/tab/yuedu_hl.png"
       },
       {
-        "text": "shuo",
-        "pagePath": ""
+        "pagePath": "pages/movies/movies",
+        "text": "电影",
+        "iconPath": "images/tab/dianying.png",
+        "selectedIconPath": "images/tab/dianying_hl.png"
       }
     ]
   }
